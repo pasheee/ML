@@ -160,7 +160,7 @@ class Translatorv3(nn.Module):
 
         # Subsequent operations
         # output = self.non_lin(self.normalization(self.linear(output)))
-        projection = self.projection(self.normalization(output))
+        projection = self.normalization(self.projection(self.normalization(output)))
         
         return projection
 

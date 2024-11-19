@@ -6,8 +6,8 @@ from tqdm import tqdm
 import torch.nn.functional as F
 from nltk.translate.bleu_score import sentence_bleu
 import numpy as np
-TARGET_MAX_LEN = 10
-SOURCE_MAX_LEN = 20
+TARGET_MAX_LEN = 50
+SOURCE_MAX_LEN = 200
 
 def read_json(filepath):
     try:
@@ -24,7 +24,7 @@ def read_json(filepath):
 
 
 
-def translate(model, sentence, source_word2ind, target_word2ind, beam_size=3, max_length=TARGET_MAX_LEN, device='cuda'):
+def translate(model, sentence, source_word2ind, target_word2ind, beam_size=4, max_length=TARGET_MAX_LEN, device='cuda'):
     model.eval()
     source_ids = torch.tensor([[source_word2ind.get(word, source_word2ind['<UNK>']) for word in sentence]]).to(device)
 
