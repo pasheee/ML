@@ -1,7 +1,7 @@
 from WordDataset import WordDataset
 
-TARGET_MAX_LEN = 50
-SOURCE_MAX_LEN = 200
+TARGET_MAX_LEN = 20
+SOURCE_MAX_LEN = 20
 
 def make_wordinddicts(data, tokenizer):
     source = []
@@ -22,7 +22,7 @@ def make_wordinddicts(data, tokenizer):
         t_sent = target[i]
         s_sent = source[i]
         t_tokens = tokenizer.tokenize(t_sent.lower())
-        s_tokens = [char for char in s_sent]
+        s_tokens = s_sent.split()
         
         target_bag_of_words.extend(t_tokens)
         source_bag_of_words.extend(s_tokens)

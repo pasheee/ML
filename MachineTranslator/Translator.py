@@ -110,8 +110,10 @@ class Translatorv3(nn.Module):
         self.n_heads = n_heads
         self.target_embeddings = nn.Embedding(target_vocab_size, hidden_dim)
         self.source_embeddings = nn.Embedding(source_vocab_size, hidden_dim)
+        
         nn.init.xavier_uniform_(self.source_embeddings.weight, nn.init.calculate_gain('relu'))
         nn.init.xavier_uniform_(self.target_embeddings.weight, nn.init.calculate_gain('relu'))
+        
         self.sp = sp
         self.tp = tp
         
@@ -160,7 +162,7 @@ class Translatorv3(nn.Module):
 
         # Subsequent operations
         # output = self.non_lin(self.normalization(self.linear(output)))
-        projection = self.normalization(self.projection(self.normalization(output)))
+        projection = self.projection(self.normalization(output))
         
         return projection
 

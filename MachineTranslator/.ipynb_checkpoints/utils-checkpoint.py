@@ -6,8 +6,8 @@ from tqdm import tqdm
 import torch.nn.functional as F
 from nltk.translate.bleu_score import sentence_bleu
 import numpy as np
-TARGET_MAX_LEN = 50
-SOURCE_MAX_LEN = 200
+TARGET_MAX_LEN = 20
+SOURCE_MAX_LEN = 65
 
 def read_json(filepath):
     try:
