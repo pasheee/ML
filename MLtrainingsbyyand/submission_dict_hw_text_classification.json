@@ -1,1 +1,1 @@
-{"bow_log_reg_sklearn_train": 0.9977685523449276, "bow_log_reg_sklearn_test": 0.8632912603519866, "emb_nn_torch_train": 0.9181410875698541, "emb_nn_torch_test": 0.8860517683590451}
+{"bow_log_reg_sklearn_train": 0.9977685523449276, "bow_log_reg_sklearn_test": 0.8632912603519866, "emb_nn_torch_train": 0.9170842716521834, "emb_nn_torch_test": 0.8806318231782297}
