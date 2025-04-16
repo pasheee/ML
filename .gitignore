@@ -1,5 +1,6 @@
-
 DLS/CH2/Homework/data/validation.tsv
 DLS/CH2/Homework/data/train.tsv
 DLS/CH2/Homework/SO_vectors_200.bin
 MachineTranslator/best_model.pth
+.ml_venv
+CVYand/.cv_venv
