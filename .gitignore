@@ -1,7 +1,7 @@
 DLS/CH2/Homework/data/validation.tsv
 DLS/CH2/Homework/data/train.tsv
 DLS/CH2/Homework/SO_vectors_200.bin
+DLS/CH2/.dls_nlp
 MachineTranslator/best_model.pth
-.ml_venv
-CVYand/.cv_venv
-NIRS/.nirs_venv
+YandexTrainings/CV/.cv_venv
+kaggle/Titanic/.titanic_venv
